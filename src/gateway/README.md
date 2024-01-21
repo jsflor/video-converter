@@ -33,5 +33,11 @@
 ## Set up k9s
 
 ```bash
-    cd manifests && kubectl apply -f ./   
+    cd manifests && kubectl apply -f ./
+```
+
+## Change number of replicas
+
+```bash
+    kubectl scale deployment --replicas=0 gateway 
 ```
