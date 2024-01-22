@@ -2,7 +2,7 @@ import os, gridfs, pika, json
 from flask import Flask, request
 from flask_pymongo import PyMongo
 from auth import validate
-from aut_svc import access
+from auth_svc import access
 from storage import util
 
 server = Flask(__name__)
