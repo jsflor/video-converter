@@ -36,9 +36,9 @@ Install k9s -> https://github.com/derailed/k9s?tab=readme-ov-file#installation
     k9s
 ```
 
-### Route mp3converter.com to 127.0.0.1
+### Route mp3converter.com and rabbitmq-manager.com to 127.0.0.1
 
-Add a "127.0.0.1 mp3converter.com" in the hosts' list
+Add a "127.0.0.1 mp3converter.com" and "127.0.0.1 rabbitmq-manager.com" in the hosts' list
 
 ```bash
     sudo vim /etc/hosts
@@ -50,7 +50,7 @@ Enable ingress functionality in minikube
     minikube addons enable ingress
 ```
 
-Tunnel mp3converter.com to 127.0.0.1
+Tunnel to 127.0.0.1
 
 ```bash
     minikube tunnel
