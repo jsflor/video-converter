@@ -69,5 +69,27 @@ Install python3 -> https://www.python.org/downloads/
 Install mysql -> https://formulae.brew.sh/formula/mysql
 
 ```bash
-    brew services start mysql
+   brew install mysql && brew services start mysql
+```
+
+### Mongodb
+
+Install mongo -> https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+
+```bash
+    brew tap mongodb/brew && brew update && brew install mongodb-community@7.0 && brew services start mongodb-community
+```
+
+## CURL
+
+Get jwt credentials
+
+```bash
+    curl -X POST http://mp3converter.com/login -u test@mail.com:test123
+```
+
+Upload video to convert
+
+```bash
+    curl -X POST -F 'file=@./video.mp4' -H 'Authorization: Bearer ${jwt}' http://mp3converter.com/upload
 ```
