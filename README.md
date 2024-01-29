@@ -88,8 +88,14 @@ Get jwt credentials
     curl -X POST http://mp3converter.com/login -u test@mail.com:test123
 ```
 
-Upload video to convert
+Upload a video to convert
 
 ```bash
     curl -X POST -F 'file=@./video.mp4' -H 'Authorization: Bearer ${jwt}' http://mp3converter.com/upload
+```
+
+Download audio from video
+
+```bash
+    curl --output mp3_download.mp3 -X GET -H 'Authorization: Bearer ${jwt}' http://mp3converter.com/download?fid=${fid}
 ```
